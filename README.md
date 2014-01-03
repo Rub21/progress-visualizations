@@ -10,22 +10,24 @@ progress-visualizations
 
 2. run covert.py to generate geojson. 
 
-$ python convert-nodes.py  houston2.osm houston.geojson
+			$ python convert-nodes.py  houston2.osm houston.geojson
 
 3. convert to sqlite via ogr2ogr.
 
-$ ogr2ogr -f "SQLite" \
-  -where " user in ( 'Rub21' )
-      and timestamp >= 1382918400 
-      and timestamp <= 1388793600 " \
-  -nln mapathon houston.sqlite houston.geojson 
+			$ ogr2ogr -f "SQLite" \
+			  -where " user in ( 'Rub21' )
+			      and timestamp >= 1382918400 
+			      and timestamp <= 1388793600 " \
+			  -nln mapathon houston.sqlite houston.geojson 
 
-  ####stats
-  $ python app.y
+  #### stats
 
-+--------+-----------+-----------+
-|  User  | Nodes V=1 | Nodes V>1 |
-+--------+-----------+-----------+
-| ediyes |    1090   |    162    |
-| Rub21  |    220    |     1     |
-+--------+-----------+-----------+
+  			$ python app.y
+
+			+--------+-----------+-----------+
+			|  User  | Nodes V=1 | Nodes V>1 |
+			+--------+-----------+-----------+
+			| ediyes |    1090   |    162    |
+			| Rub21  |    220    |     1     |
+			+--------+-----------+-----------+
+
