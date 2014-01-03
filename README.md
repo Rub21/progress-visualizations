@@ -10,7 +10,7 @@ progress-visualizations
 
 2. run covert.py to generate geojson. 
 
-			$ python convert-nodes.py  houston2.osm houston.geojson
+			$ python convert-nodes.py  jacksonville.osm jacksonville.geojson
 
 3. convert to sqlite via ogr2ogr.
 
@@ -18,11 +18,11 @@ progress-visualizations
 			  -where " user in ( 'Rub21' )
 			      and timestamp >= 1382918400 
 			      and timestamp <= 1388793600 " \
-			  -nln mapathon houston.sqlite houston.geojson 
+			  -nln mapathon jacksonville.sqlite jacksonville.geojson 
 
   #### stats
 
-  			$ python app.y
+  			$ python app.py
 
 			+--------+-----------+-----------+
 			|  User  | Nodes V=1 | Nodes V>1 |
